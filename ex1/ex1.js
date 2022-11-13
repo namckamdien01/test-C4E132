@@ -18,7 +18,11 @@ submitForm.addEventListener('click', (e) => {
         notEnter.innerText = 'Phải nhập đủ cả a và b';
         form.appendChild(notEnter);
     } else {
-        for (let i = a + 1; i < b; i++) {
+        let i;
+        if (a < 2) {
+            i = 2
+        } else i = a + 1;
+        for (i; i < b; i++) {
             let check = true
             for (let j = 2; j <= i / 2; j++) {
                 if (i % j == 0) {
